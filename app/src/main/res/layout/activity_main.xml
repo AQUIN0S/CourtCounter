@@ -8,23 +8,19 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:baselineAligned="false"
         android:orientation="horizontal" >
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
+        <LinearLayout style="@style/TeamLayoutDimensions">
 
             <TextView
-                style="@style/TextViewStyle"
+                style="@style/TeamNameTextViews"
                 android:text="@string/teamA" />
 
             <TextView
                 android:id="@+id/team_A_score"
-                style="@style/TextViewStyle"
+                style="@style/ScoreTextViews"
                 android:text="@string/teamAScore" />
 
             <Button
@@ -44,19 +40,21 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="0dp"
+        <View
+            android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:background="@color/divider"
+            android:layout_marginTop="16dp"/>
+
+        <LinearLayout style="@style/TeamLayoutDimensions">
 
             <TextView
-                style="@style/TextViewStyle"
+                style="@style/TeamNameTextViews"
                 android:text="@string/teamA" />
 
             <TextView
                 android:id="@+id/team_B_score"
-                style="@style/TextViewStyle"
+                style="@style/ScoreTextViews"
                 android:text="@string/teamAScore" />
 
             <Button
@@ -84,7 +82,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_margin="8dp"
+        android:layout_margin="32dp"
         android:text="@string/resetScore"
         android:textStyle="bold"
         android:onClick="resetScores"/>
