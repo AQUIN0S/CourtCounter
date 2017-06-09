@@ -3,31 +3,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
     tools:context="com.example.android.courtcounter.MainActivity">
 
-    <TextView
-        style="@style/TextViewStyle"
-        android:text="@string/teamA" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-    <TextView
-        style="@style/TextViewStyle"
-        android:id="@+id/team_A_score"
-        android:text="@string/teamAScore" />
+        <TextView
+            style="@style/TextViewStyle"
+            android:text="@string/teamA" />
 
-    <Button
-        style="@style/ButtonStyle"
-        android:text="@string/threePointer"
-        android:onClick="noteThreePointer" />
+        <TextView
+            android:id="@+id/team_A_score"
+            style="@style/TextViewStyle"
+            android:text="@string/teamAScore" />
 
-    <Button
-        style="@style/ButtonStyle"
-        android:text="@string/basket"
-        android:onClick="noteBasket" />
+        <Button
+            style="@style/ButtonStyle"
+            android:onClick="threePointerTeamA"
+            android:text="@string/threePointer" />
 
-    <Button
-        style="@style/ButtonStyle"
-        android:text="@string/freeThrow"
-        android:onClick="noteFreeThrow" />
+        <Button
+            style="@style/ButtonStyle"
+            android:onClick="basketTeamA"
+            android:text="@string/basket" />
+
+        <Button
+            style="@style/ButtonStyle"
+            android:onClick="freeThrowTeamA"
+            android:text="@string/freeThrow" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:text="@string/teamA" />
+
+        <TextView
+            android:id="@+id/team_B_score"
+            style="@style/TextViewStyle"
+            android:text="@string/teamAScore" />
+
+        <Button
+            style="@style/ButtonStyle"
+            android:onClick="threePointerTeamB"
+            android:text="@string/threePointer" />
+
+        <Button
+            style="@style/ButtonStyle"
+            android:onClick="basketTeamB"
+            android:text="@string/basket" />
+
+        <Button
+            style="@style/ButtonStyle"
+            android:onClick="freeThrowTeamB"
+            android:text="@string/freeThrow" />
+
+    </LinearLayout>
 
 </LinearLayout>
