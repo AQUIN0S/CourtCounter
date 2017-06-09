@@ -5,4 +5,5 @@
     <string name="threePointer">+3 Points</string>
     <string name="basket">+2 Points</string>
     <string name="freeThrow">Free Throw</string>
+    <string name="resetScore">Reset</string>
 </resources>
