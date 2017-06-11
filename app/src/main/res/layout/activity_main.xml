@@ -1,90 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context="com.example.android.courtcounter.MainActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:baselineAligned="false"
-        android:orientation="horizontal" >
+        android:layout_height="wrap_content">
 
-        <LinearLayout style="@style/TeamLayoutDimensions">
+        <LinearLayout
+            android:id="@+id/teams_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal" >
 
-            <TextView
-                style="@style/TeamNameTextViews"
-                android:text="@string/teamA" />
+            <LinearLayout style="@style/TeamLayoutDimensions">
 
-            <TextView
-                android:id="@+id/team_A_score"
-                style="@style/ScoreTextViews"
-                android:text="@string/teamAScore" />
+                <TextView
+                    style="@style/TeamNameTextViews"
+                    android:text="@string/teamA" />
 
-            <Button
-                style="@style/ButtonStyle"
-                android:onClick="threePointerTeamA"
-                android:text="@string/threePointer" />
+                <TextView
+                    android:id="@+id/team_A_score"
+                    style="@style/ScoreTextViews"
+                    android:text="@string/teamAScore" />
 
-            <Button
-                style="@style/ButtonStyle"
-                android:onClick="basketTeamA"
-                android:text="@string/basket" />
+                <Button
+                    style="@style/ButtonStyle"
+                    android:onClick="threePointerTeamA"
+                    android:text="@string/threePointer" />
 
-            <Button
-                style="@style/ButtonStyle"
-                android:onClick="freeThrowTeamA"
-                android:text="@string/freeThrow" />
+                <Button
+                    style="@style/ButtonStyle"
+                    android:onClick="basketTeamA"
+                    android:text="@string/basket" />
+
+                <Button
+                    style="@style/ButtonStyle"
+                    android:onClick="freeThrowTeamA"
+                    android:text="@string/freeThrow" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/divider"
+                android:layout_marginTop="16dp"/>
+
+            <LinearLayout style="@style/TeamLayoutDimensions">
+
+                <TextView
+                    style="@style/TeamNameTextViews"
+                    android:text="@string/teamA" />
+
+                <TextView
+                    android:id="@+id/team_B_score"
+                    style="@style/ScoreTextViews"
+                    android:text="@string/teamAScore" />
+
+                <Button
+                    style="@style/ButtonStyle"
+                    android:onClick="threePointerTeamB"
+                    android:text="@string/threePointer" />
+
+                <Button
+                    style="@style/ButtonStyle"
+                    android:onClick="basketTeamB"
+                    android:text="@string/basket" />
+
+                <Button
+                    style="@style/ButtonStyle"
+                    android:onClick="freeThrowTeamB"
+                    android:text="@string/freeThrow" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:background="@color/divider"
-            android:layout_marginTop="16dp"/>
+        <Button
+            android:id="@+id/reset_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/teams_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="32dp"
+            android:text="@string/resetScore"
+            android:textStyle="bold"
+            android:onClick="resetScores"/>
 
-        <LinearLayout style="@style/TeamLayoutDimensions">
+        </RelativeLayout>
 
-            <TextView
-                style="@style/TeamNameTextViews"
-                android:text="@string/teamA" />
-
-            <TextView
-                android:id="@+id/team_B_score"
-                style="@style/ScoreTextViews"
-                android:text="@string/teamAScore" />
-
-            <Button
-                style="@style/ButtonStyle"
-                android:onClick="threePointerTeamB"
-                android:text="@string/threePointer" />
-
-            <Button
-                style="@style/ButtonStyle"
-                android:onClick="basketTeamB"
-                android:text="@string/basket" />
-
-            <Button
-                style="@style/ButtonStyle"
-                android:onClick="freeThrowTeamB"
-                android:text="@string/freeThrow" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/reset_score"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="32dp"
-        android:text="@string/resetScore"
-        android:textStyle="bold"
-        android:onClick="resetScores"/>
-
-</RelativeLayout>
+    </ScrollView>
